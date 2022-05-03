@@ -43,12 +43,11 @@ package com.company;
             return result;
         }
 
-        public double methodTransferArnold(double amount){
-            return balance -= amount;
+        public void methodTransferArnold(double amount) throws NotEnoughMoney.NotEnoughMoneyException {
+            if(balance >= amount){
+                balance -= amount;}
+            else{throw new NotEnoughMoney.NotEnoughMoneyException("There is insufficient amount in the account ");}
+            }
         }
-
-        public void methodTransferArnold(int i) {
-        }
-    }
 
 
